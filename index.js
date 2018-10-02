@@ -6,11 +6,15 @@ app.get('/', (req, res) => {
 });
 
 app.get('/thing/:param1/:param2', (req, res) => {
-  res.end(req.params.hi);
+  res.end(req.params.param1);
 })
 
 app.get('/thing/:param1/other/:param2', (req, res) => {
-  res.end(req.params.hi);
+  res.end(req.params.param2);
+})
+
+app.post('/', (req, res) => {
+  res.end('POST !');
 })
 
 app.listen(3000, 'localhost');
