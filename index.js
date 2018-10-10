@@ -15,7 +15,7 @@ app.get('/thing/:param1/other/:param2', (req, res) => {
 
 app.post('/', (req, res) => {
   res.write(req.body);
-  res.end('\nPOST !');
+  res.end('\nPOST !\n');
 })
 
 app.listen(3000, 'localhost');
